@@ -1,3 +1,4 @@
+// app/home/page.tsx
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -146,8 +147,8 @@ export default function Page() {
   if (!checkedAuth) return null;
 
   return (
-    <main className="min-h-screen w-full bg-[#f5f5f7]">
-      <div className="flex min-h-screen w-full flex-col">
+    <main className="text-black dark:text-black h-screen w-full overflow-hidden bg-[#f5f5f7]">
+      <div className="flex h-full w-full flex-col">
         <header className="flex w-full items-center justify-between border-b border-gray-200 bg-white px-6 py-3">
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-500 text-sm font-bold text-white">
@@ -178,8 +179,8 @@ export default function Page() {
           </div>
         </header>
 
-        <section className="flex-1 p-5">
-          <div className="grid h-100  grid-cols-1 gap-5 lg:grid-cols-[400px_1fr]">
+        <section className="flex-1 max-h-100 min-h-0 p-5">
+          <div className="grid h-full min-h-0 grid-cols-1 gap-5 lg:grid-cols-[400px_1fr]">
             <ContactFormCard
               formData={formData}
               setFormData={setFormData}
